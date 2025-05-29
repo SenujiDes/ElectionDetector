@@ -17,7 +17,7 @@ st.set_page_config(
 # Title and introduction
 st.title("UNP Sri Lanka Strategy Dashboard")
 st.markdown("""
-**Rebuilding Trust Through Faith-Sensitive District Engagement (2020-2030)**
+**Rebuilding Trust Through Faith-Sensitive District Engagement (2025-2030)**
 
 This dashboard visualizes the UNP's comprehensive strategy to rebuild from their historic 2020 defeat by engaging with religious communities across all 25 districts of Sri Lanka.
 """)
@@ -222,7 +222,7 @@ for col in ['Buddhist', 'Muslim', 'Christian', 'Hindu']:
 #     filtered_df = filtered_df[filtered_df['Province'] == selected_province]
 
 # Main content with tabs
-tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "🗺️ District Analysis", "🤝 Strategies", "📈 Analytics"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["📊 Overview", "🗺️ District Analysis", "🤝 Strategies", "📈 Analytics", "📣 Messaging & Branding"])
 
 with tab1:
     st.header("Overview of Religious Demographics")
@@ -380,7 +380,7 @@ with tab3:
             
             fig_demo = px.pie(pd.DataFrame(demo_data), values='Percentage', names='Religion',
                              color_discrete_map={
-                                 'Buddhist': '#FF6B6B',
+                                 'Buddhist': "#31D414",
                                  'Muslim': '#4ECDC4',
                                  'Christian': '#45B7D1',
                                  'Hindu': '#96CEB4'
@@ -484,6 +484,121 @@ with tab4:
             'Hindu': 'mean'
         }).round(1)
         st.dataframe(provincial_summary, use_container_width=True)
+
+with tab5:
+    st.header("Campaign Messaging & Branding Strategy")
+    
+    # Core Messaging Section
+    st.subheader("Core Messaging Principles")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        ### Clear Communication
+        - Be crystal-clear with campaign messaging
+        - Develop short, memorable taglines
+        - Maintain consistent messaging across platforms
+        """)
+        
+        st.markdown("""
+        ### Authenticity and Empathy
+        - Conduct listening tours and town halls
+        - Share personal anecdotes
+        - Demonstrate transparency about values
+        """)
+    
+    with col2:
+        # Create metrics to show engagement stats
+        st.metric("Target Message Length", "15-20 words", "Concise & Clear")
+        st.metric("Key Touchpoints", "7+ times", "Message Repetition")
+        st.metric("Response Time", "< 24 hours", "Community Engagement")
+    
+    # Outreach Strategy
+    st.subheader("Multi-Channel Outreach Strategy")
+    
+    outreach_cols = st.columns(4)
+    
+    with outreach_cols[0]:
+        st.markdown("""
+        ### Door-to-Door
+        - Personal conversations
+        - Direct voter engagement
+        - Local issue focus
+        """)
+    
+    with outreach_cols[1]:
+        st.markdown("""
+        ### Phone & Text
+        - Evening outreach
+        - Weekend campaigns
+        - Targeted messaging
+        """)
+    
+    with outreach_cols[2]:
+        st.markdown("""
+        ### Social Media
+        - Platform-specific content
+        - Short video updates
+        - Community engagement
+        """)
+    
+    with outreach_cols[3]:
+        st.markdown("""
+        ### Live Events
+        - Virtual Q&As
+        - Town halls
+        - Community forums
+        """)
+    
+    # Visual Branding Guidelines
+    st.subheader("Visual Branding Guidelines")
+    
+    # Sample color palette
+    colors = ["#2FDF10", "#ECEC25", "#FFFFFF"]
+    colors_html = ' '.join([f'<div style="display: inline-block; width: 50px; height: 50px; background-color: {color}; margin: 5px; border-radius: 5px;"></div>' for color in colors])
+    
+    st.markdown("""
+    ### Brand Colors
+    Consistent use across all campaign materials:
+    """)
+    st.markdown(f"""
+    <div style='display: inline-block; background-color: #000000; padding: 10px; border-radius: 10px; width: fit-content;'>
+        {colors_html}
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    ### Visual Content Guidelines
+    - Professional photography
+    - High-quality video production
+    - Consistent logo placement
+    - Clean, readable typography
+    """)
+    
+    # Best Practices Expander
+    with st.expander("📋 Best Practices & Tips"):
+        st.markdown("""
+        ### Content Creation Tips
+        1. **Video Content**
+           - Keep videos under 2 minutes
+           - Use captions for accessibility
+           - Film in well-lit locations
+        
+        2. **Social Media**
+           - Post during peak engagement times
+           - Use hashtags strategically
+           - Respond to comments promptly
+        
+        3. **Print Materials**
+           - Use high-resolution images
+           - Include clear call-to-action
+           - Maintain consistent branding
+        
+        4. **Community Engagement**
+           - Document all interactions
+           - Follow up on commitments
+           - Share success stories
+        """)
 
 # Footer
 st.markdown("---")
