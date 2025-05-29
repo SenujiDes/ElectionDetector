@@ -110,20 +110,20 @@ for col in ['Buddhist', 'Muslim', 'Christian', 'Hindu']:
     df[col] = df[col].fillna(0)
 
 # Sidebar
-st.sidebar.header("🔍 Filters")
+# st.sidebar.header("🔍 Filters")
 
-# Province filter
-provinces = ['All'] + sorted(df['Province'].unique().tolist())
-selected_province = st.sidebar.selectbox("Select Province", provinces)
+# # Province filter
+# provinces = ['All'] + sorted(df['Province'].unique().tolist())
+# selected_province = st.sidebar.selectbox("Select Province", provinces)
 
-# Religion filter
-religions = ['All', 'Buddhist', 'Muslim', 'Christian', 'Hindu']
-selected_religion = st.sidebar.selectbox("Highlight Religion", religions)
+# # Religion filter
+# religions = ['All', 'Buddhist', 'Muslim', 'Christian', 'Hindu']
+# selected_religion = st.sidebar.selectbox("Highlight Religion", religions)
 
 # Filter data
-filtered_df = df.copy()
-if selected_province != 'All':
-    filtered_df = filtered_df[filtered_df['Province'] == selected_province]
+# filtered_df = df.copy()
+# if selected_province != 'All':
+#     filtered_df = filtered_df[filtered_df['Province'] == selected_province]
 
 # Main content with tabs
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Overview", "🗺️ District Analysis", "🤝 Strategies", "📈 Analytics"])
