@@ -8,13 +8,13 @@ import numpy as np
 # Page configuration
 st.set_page_config(
     page_title="UNP Sri Lanka Religious Engagement Strategy",
-    page_icon="🏛️",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Title and introduction
-st.title("🏛️ UNP Sri Lanka Strategy Dashboard")
+st.title("UNP Sri Lanka Strategy Dashboard")
 st.markdown("""
 **Rebuilding Trust Through Faith-Sensitive District Engagement (2020-2030)**
 
