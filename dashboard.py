@@ -98,6 +98,101 @@ strategies_data = {
         "Tea-Worker Welfare Boards: Joint committees with Tamil unions and Sinhala elders",
         "Poya-Day Clinics: Free clinics promoted through kovils, viharas, and churches",
         "Inter-Community Tea-Tours: Use factory tours for community dialogue"
+    ],
+    'Matale': [
+        "Temple-Farmers Roundtables: Partner with kovils and viharas to support smallholder tea and vegetable farmers through knowledge exchanges",
+        "Heritage Tourism Workshops: Interfaith tours of Aluvihare Rock Temple and Dutch Fort led by local religious guides",
+        "Youth Sports Leagues: Cross-faith cricket and volleyball tournaments sponsored by temples, churches, mosques, and kovils"
+    ],
+    'Galle': [
+        "Sea2Temple Clean-Ups: Multi-faith beach cleanup drives along Unawatuna and Galle beaches",
+        "Fort Heritage Festivals: Annual interfaith cultural fair at Galle Fort hosted by Buddhist, Hindu, Muslim, and Christian groups",
+        "Fisher Livelihood Grants: Microfinance for small-scale fishermen in partnership with local churches and mosques"
+    ],
+    'Matara': [
+        "Nilwala River Health Camps: Mobile clinics promoted through temples, churches, and mosques along the river basin",
+        "Teardrop Temple Tours: Inter-community tours of the Parevi Duwa temple and Matara Fort led by youth volunteers",
+        "Women’s Vocational Training: Skill-building workshops at temples and churches for single mothers"
+    ],
+    'Hambantota': [
+        "Port Community Dialogues: Quarterly town halls with Buddhist and Muslim leaders on port expansion benefits",
+        "Wildlife Conservation Drives: Interfaith volunteer days at Bundala and Yala national parks",
+        "Youth Coding Bootcamps: Hackathons hosted in local religious centres to build digital literacy"
+    ],
+    'Batticaloa': [
+        "Tamil-Muslim Cultural Fairs: Joint celebrations of Hindu and Islamic festivals alongside church choirs",
+        "Fisher Welfare Workshops: Vocational training for coastal fishermen via kovils and mosque committees",
+        "Youth Peacebuilding Camps: Residential interfaith programs for Christian, Hindu, and Muslim youth"
+    ],
+    'Ampara': [
+        "Agrarian Extension Clinics: Mobile agriculture advice via mosque, kovil, and church networks",
+        "Ramadan & Poson Food Drives: Joint community meals distributed through temples and mosques",
+        "Women’s Literacy Circles: Faith-based adult education classes run from churches and mosques"
+    ],
+    'Anuradhapura': [
+        "Sacred Site Pilgrimages: Interfaith guided tours of Sri Maha Bodhi and ancient stupas",
+        "Agricultural Microgrants: Support for paddy farmers via temple and mosque patronage",
+        "Cultural Youth Camps: Camps teaching heritage traditions across Buddhism, Islam, Hinduism, and Christianity"
+    ],
+    'Polonnaruwa': [
+        "Heritage Conservation Projects: Volunteer restoration days at Vatadage and kovils",
+        "Temple-Mosque Dialogue Forums: Monthly interfaith dialogues inside the medieval city walls",
+        "Youth Scholarship Awards: Cross-religion academic scholarships funded by local clergy"
+    ],
+    'Kurunegala': [
+        "Faith & Farming Workshops: Sustainable agriculture training at temple and mosque grounds",
+        "Buddhist-Church Youth Festivals: Annual festivals with music, dance and sports competitions",
+        "Volunteer Health Camps: Mobile clinics rotating between kovils, viharas, and churches"
+    ],
+    'Puttalam': [
+        "Saltworker Support Fund: Microfinance for salt-pan communities via mosque and church partnerships",
+        "Interfaith Mangrove Clean-ups: Coastal restoration drives led by Hindu, Muslim, and Christian volunteers",
+        "Youth Entrepreneurship Grants: Seed funding for interfaith youth-led social enterprises"
+    ],
+    'Jaffna': [
+        "Temple & Church Heritage Tours: Joint cultural tours of Nallur Kandaswamy Kovil and Jaffna Cathedral",
+        "Fisher Livelihood Training: Modern fishing techniques taught under mosque and kovil sponsorship",
+        "Youth Debate Clubs: Interfaith public speaking competitions in schools and temples"
+    ],
+    'Kilinochchi': [
+        "Post-War Healing Circles: Interfaith trauma support sessions hosted by churches and kovils",
+        "Vocational Training Hubs: Skill centers at mosque and temple grounds for unemployed youth",
+        "Cultural Music Festivals: Joint concerts of Hindu, Muslim, and Christian devotional music"
+    ],
+    'Mannar': [
+        "Fisher Empowerment Forums: Community discussions with Tamil Catholic and Muslim fishing leaders",
+        "Beach Safety Clinics: First-aid training at local kovils and churches",
+        "Youth Film Workshops: Interfaith storytelling film camps supported by clergy"
+    ],
+    'Vavuniya': [
+        "Reconciliation Seminars: Interfaith dialogue on post-conflict healing at churches and kovils",
+        "Agricultural Co-ops: Joint farmer cooperatives supported by mosque and temple committees",
+        "Sports for Peace: Mixed-faith sports tournaments in local community centers"
+    ],
+    'Mullaitivu': [
+        "Island Fisher Microfinance: Low-interest loans for island fishing communities via mosque networks",
+        "Trauma Counseling Centers: Faith-based counseling run by church and kovil volunteers",
+        "Youth Arts Workshops: Cross-community art programs in schools and religious centers"
+    ],
+    'Badulla': [
+        "Tea Estate Health Camps: Mobile clinics in plantation areas via temples and churches",
+        "Poson Pilgrimage Support: Joint pilgrim transport services run by kovil and church committees",
+        "Mountain Trail Clean-ups: Conservation days in the Knuckles range with multi-faith volunteers"
+    ],
+    'Monaragala': [
+        "Rural Livelihood Training: Skill workshops at temples, kovils, and mosque grounds for subsistence farmers",
+        "Interfaith Literacy Drives: Adult reading classes hosted by churches and viharas",
+        "Youth Leadership Forums: Cross-faith leadership training for local high school students"
+    ],
+    'Ratnapura': [
+        "Gem Mining Safety Clinics: Health and safety workshops for mine workers via Buddhist and Christian centers",
+        "Rainforest Restoration Drives: Reforestation projects led by temple and church youth groups",
+        "Scholarship Fairs: Cross-community education fairs sponsored by clergy"
+    ],
+    'Kegalle': [
+        "Rubber Farmer Roundtables: Knowledge exchange sessions at kovils and viharas",
+        "Temple-Mosque Food Banks: Joint food distribution programs in low-income areas",
+        "Youth Heritage Projects: Community history mapping with multi-faith student teams"
     ]
 }
 
@@ -252,7 +347,7 @@ with tab2:
             st.metric("Minority Population", f"{total_minorities:.1f}%")
 
 with tab3:
-    st.header("🤝 Faith-Sensitive Engagement Strategies")
+    st.header("Faith-Sensitive Engagement Strategies")
     
     # Strategy search
     strategy_district = st.selectbox("Select District for Strategy Details", 
