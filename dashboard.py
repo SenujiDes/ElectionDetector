@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 
+# Set page title and icon
 # Page configuration
 st.set_page_config(
     page_title="UNP Sri Lanka Religious Engagement Strategy",
